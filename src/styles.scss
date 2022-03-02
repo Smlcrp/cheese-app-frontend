@@ -1,0 +1,28 @@
+// Variables
+$maincolor: red;
+$contrastcolor: black;
+
+@mixin black-text-red-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin red-text-black-bg {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
+
+// Header
+nav {
+    @include black-text-red-bg;
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+        @include black-text-red-bg;
+        div {
+            margin: 10px;
+            font-size: large;
+        }
+    }
+}
